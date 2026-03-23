@@ -15,3 +15,58 @@ body {
   background: #09090b;
   color: white;
 }
+@keyframes floatOne {
+  0% {
+    transform: translate3d(-8%, -6%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(8%, 6%, 0) scale(1.14);
+  }
+  100% {
+    transform: translate3d(-8%, -6%, 0) scale(1);
+  }
+}
+
+@keyframes floatTwo {
+  0% {
+    transform: translate3d(6%, -8%, 0) scale(1.06);
+  }
+  50% {
+    transform: translate3d(-8%, 7%, 0) scale(0.92);
+  }
+  100% {
+    transform: translate3d(6%, -8%, 0) scale(1.06);
+  }
+}
+
+.sima-bg-orb {
+  position: absolute;
+  width: clamp(280px, 38vw, 640px);
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.58;
+}
+
+.sima-bg-orb--primary {
+  top: -12%;
+  left: -10%;
+  background: radial-gradient(circle at 30% 30%, #a855f7 0%, #6d28d9 50%, #09090b 78%);
+  animation: floatOne 18s ease-in-out infinite;
+}
+
+.sima-bg-orb--secondary {
+  right: -14%;
+  bottom: -16%;
+  background: radial-gradient(circle at 55% 45%, #d946ef 0%, #7e22ce 44%, #030712 78%);
+  animation: floatTwo 22s ease-in-out infinite;
+}
+
+.sima-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+}
