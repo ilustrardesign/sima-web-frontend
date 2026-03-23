@@ -1,7 +1,5 @@
+import AppRouter from './app/router/AppRouter'
+
 export default function App() {
-  return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center">
-      <h1 className="text-3xl font-semibold">SIMA Demo Frontend</h1>
-    </main>
-  )
+  return <AppRouter />
 }
